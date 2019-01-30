@@ -1,0 +1,14 @@
+{
+  "name": "New York Times Viewer",
+  "version": "1.0",
+  "description": "To bypass the article limit barrier for non-subscribers",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+}
