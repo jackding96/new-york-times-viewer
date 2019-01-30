@@ -1,3 +1,10 @@
+// function runScript() {
+//   console.log('hello!');
+//   chrome.tabs.executeScript({
+//     code: 'document.body.style.backgroundColor="red"'
+//   });
+// }
+
 // For when the user changes activeTab
 chrome.tabs.onActivated.addListener(function(activeInfo) {
 
@@ -5,7 +12,7 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
   chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     var url = tabs[0].url;
     if(url.includes('nytimes.com') && url.includes('.html')) {
-      console.log(url);
+      // runScript();
     }
   });
 });
@@ -17,7 +24,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   if (changeInfo.status == 'complete') {
     url = tab.url;
     if(url.includes('nytimes.com') && url.includes('.html')) {
-      console.log(url);
+      // runScript();
     }
   }
 });

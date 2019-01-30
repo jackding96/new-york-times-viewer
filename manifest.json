@@ -10,5 +10,11 @@
   "permissions": [
     "activeTab",
     "tabs"
-  ]
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.nytimes.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]  
 }
